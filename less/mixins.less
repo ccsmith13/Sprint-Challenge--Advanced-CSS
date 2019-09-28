@@ -1,1 +1,36 @@
-// Mixins Here
+//basic block display for header
+.centered-block-display(@width){
+    display: block;
+    width: @width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.nav-links-centered(){
+    text-decoration: none;
+    font-family: @nav-font;
+    color: @header-font-color;
+    font-size: 16px;
+}
+.space-images-flex(){
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.space-images-style(){
+    width: 28%;
+    margin: 20px 2.5%;
+    border-radius: 20px;
+    height: 100%;
+}
+.btn-styler(@width, @height){
+    border-radius: 5px;
+    background-color: @btn-bg-color;
+    font-size: 14px;
+    color: @porcelain;
+    width: @width;
+    height: @height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
