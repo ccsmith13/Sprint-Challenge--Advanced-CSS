@@ -1,23 +1,50 @@
+
 //Navigation Styling
+
 .heading-wrapper{
     background-color:@nav-bg;
     border-bottom: @border-style;
-    padding: 1%;
+    padding: @default-padding;
 
     .nav-wrapper{
-        .centered-block-display(40%);
+        .centered-block-display(50%);
         margin-top: 2%;
         margin-bottom: 2%;
+
+        @media @phone{
+            width: 100%;
+        }
 
         h1{
             font-size: 42px;
             margin-bottom: 2%;
             color: @header-font-color;
+
+            @media @phone{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+            a{
+                text-decoration: none;
+                font-family: @nav-font;
+                color: @header-font-color;
+                font-size: 16px;
+    
+                @media @phone{
+                    margin: 2%;
+                }
+            }
         }
 
-        a{
-            .nav-links-centered();
-            padding: 4%;
-        }
     }
 }

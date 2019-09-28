@@ -5,12 +5,12 @@
   .intro {
 
     h2 {
-      padding: 15px;
+      padding: @default-padding;
       color: @header-font-color;
     }
 
     p {
-      padding:0 15px;
+      padding:0 @default-padding;
       color: @main-font-color;
     }
   
@@ -18,6 +18,24 @@
 
   .space-images {
     .space-images-flex();
+    .blast{
+      @media @phone{
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .sky{
+      @media @phone{
+        display: none;
+      }
+    }
+    .launch{
+      @media @phone{
+        display: none;
+      }
+    }
 
     img {
       .space-images-style();
@@ -25,7 +43,11 @@
   }
 
   .visit-planets {
-    padding: 15px;
+    padding: @default-padding;
+
+    @media @phone{
+      border-bottom: @border-style;
+    }
 
     h3 {
       margin-top: 11px;
@@ -45,8 +67,22 @@
     display: flex;
     justify-content: center;
 
+    @media @phone{
+      margin-top: 20px;
+      display: block;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: none;
+      padding: 2%;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone{
+        width: 100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -60,7 +96,16 @@
 
       .btn {
         .btn-styler(30%,10%);
-
+        
+        @media @phone{
+          display: block;
+          width: 100%;
+          height: 50px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          padding-top: 20px;
+        }
         &:hover{
           background-color: @porcelain;
           color: @btn-bg-color;
@@ -77,6 +122,30 @@
         height: auto;
         border-radius: 10px;
       }
+      
+      @media @phone{
+        display: none;
+      }
     }
   }
-}// home
+}
+
+//mobile image rendering
+.walk-img-mobile {
+display: none;
+
+  @media @phone{
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  img{
+    border-radius: 10px;
+    @media @phone{
+      width: 100%;
+    }
+  }
+}
