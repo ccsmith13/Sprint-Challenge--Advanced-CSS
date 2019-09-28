@@ -1,7 +1,8 @@
 // Home Content
 
 .home {
-
+  margin-top: 150px;
+  
   .intro {
 
     h2 {
@@ -19,11 +20,9 @@
   .space-images {
     .space-images-flex();
     .blast{
+
       @media @phone{
-        display: block;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        .centered-block-display(90%);
       }
     }
     .sky{
@@ -68,11 +67,9 @@
     justify-content: center;
 
     @media @phone{
+      .centered-block-display(90%);
+      text-align: left;
       margin-top: 20px;
-      display: block;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
       border-top: none;
       padding: 2%;
     }
@@ -98,13 +95,9 @@
         .btn-styler(30%,10%);
         
         @media @phone{
-          display: block;
-          width: 100%;
+          .centered-block-display(100%);
           height: 50px;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;
-          padding-top: 20px;
+          padding-top: @default-padding+5;
         }
         &:hover{
           background-color: @porcelain;
@@ -135,10 +128,7 @@
 display: none;
 
   @media @phone{
-    display: block;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    .centered-block-display(90%);
     margin-top: 20px;
   }
 
