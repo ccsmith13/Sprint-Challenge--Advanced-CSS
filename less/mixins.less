@@ -1,1 +1,68 @@
-// Mixins Here
+
+//basic block display for header
+.centered-block-display(@width){
+    display: block;
+    width: @width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+//basic centered flex display for nav
+.centered-flex-display(@width,@justify){
+    display: flex;
+    width: @width;
+    justify-content: @justify;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//for body images with given flex display
+.space-images-flex(){
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+//styling for body images
+.space-images-style(){
+    width: 28%;
+    margin: 20px 2.5%;
+    border-radius: 20px;
+    height: 100%;
+}
+
+//button creator with 2 parameters: width and height
+.btn-styler(@width, @height){
+    border-radius: 5px;
+    background-color: @btn-bg-color;
+    font-size: 14px;
+    color: @porcelain;
+    width: @width;
+    height: @height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+//animations - stretch goals
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+.btn{
+    .keyframes(fade-in;{
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+		});
+
+	.animation(fade-in 0.6s linear infinite alternate);
+}

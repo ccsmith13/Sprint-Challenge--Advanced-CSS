@@ -1,0 +1,411 @@
+.btn {
+  -webkit-animation: fade-in 0.6s linear infinite alternate;
+  -moz-animation: fade-in 0.6s linear infinite alternate;
+  animation: fade-in 0.6s linear infinite alternate;
+}
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #5E6164;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Russo One', sans-serif;
+  color: #23293B;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.heading-wrapper {
+  background-color: #F6F6F6;
+  opacity: 0.8;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 15%;
+  display: block;
+}
+.heading-wrapper .nav-wrapper {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+@media (max-width: 500px) {
+  .heading-wrapper .nav-wrapper {
+    width: 100%;
+  }
+}
+.heading-wrapper .nav-wrapper h1 {
+  font-size: 42px;
+  margin-bottom: 2%;
+  color: #23293B;
+}
+@media (max-width: 500px) {
+  .heading-wrapper .nav-wrapper h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.heading-wrapper .nav-wrapper nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heading-wrapper .nav-wrapper nav a {
+  text-decoration: none;
+  font-family: #454A59;
+  color: #23293B;
+  font-size: 16px;
+}
+@media (max-width: 500px) {
+  .heading-wrapper .nav-wrapper nav a {
+    margin: 2%;
+  }
+}
+footer {
+  color: #81848E;
+  background: #F6F6F6;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home {
+  margin-top: 150px;
+}
+.home .intro h2 {
+  padding: 15px;
+  color: #23293B;
+}
+.home .intro p {
+  padding: 0 15px;
+  color: #5E6164;
+}
+.home .space-images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images .blast {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .sky {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .launch {
+    display: none;
+  }
+}
+.home .space-images img {
+  width: 28%;
+  margin: 20px 2.5%;
+  border-radius: 20px;
+  height: 100%;
+}
+.home .visit-planets {
+  padding: 15px;
+}
+@media (max-width: 500px) {
+  .home .visit-planets {
+    border-bottom: 1px solid #F1F1F1;
+  }
+}
+.home .visit-planets h3 {
+  margin-top: 11px;
+  color: #23293B;
+}
+.home .visit-planets p {
+  margin-top: 13px;
+  color: #5E6164;
+}
+.home .walk {
+  margin-top: 60px;
+  border-top: 1px solid #F1F1F1;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .home .walk {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-align: left;
+    margin-top: 20px;
+    border-top: none;
+    padding: 2%;
+  }
+}
+.home .walk .walk-text {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
+}
+.home .walk .walk-text h3 {
+  margin-bottom: 10px;
+  color: #23293B;
+}
+.home .walk .walk-text p {
+  margin-bottom: 26px;
+  color: #5E6164;
+}
+.home .walk .walk-text .btn {
+  border-radius: 5px;
+  background-color: #22283A;
+  font-size: 14px;
+  color: #F6F7F8;
+  width: 30%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 50px;
+    padding-top: 20px;
+  }
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #F6F7F8;
+  color: #22283A;
+}
+.home .walk .walk-img {
+  width: 46%;
+  margin-left: 4%;
+}
+.home .walk .walk-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    display: none;
+  }
+}
+.walk-img-mobile {
+  display: none;
+}
+@media (max-width: 500px) {
+  .walk-img-mobile {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+.walk-img-mobile img {
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .walk-img-mobile img {
+    width: 100%;
+  }
+}

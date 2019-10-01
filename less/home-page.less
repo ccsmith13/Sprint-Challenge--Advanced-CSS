@@ -1,63 +1,108 @@
 // Home Content
 
 .home {
-
+  margin-top: 150px;
+  
   .intro {
 
     h2 {
-      padding: 15px;
+      padding: @default-padding;
+      color: @header-font-color;
     }
 
     p {
-      padding:0 15px;
+      padding:0 @default-padding;
+      color: @main-font-color;
     }
   
   }
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    .space-images-flex();
+    .blast{
+
+      @media @phone{
+        .centered-block-display(90%);
+      }
+    }
+    .sky{
+      @media @phone{
+        display: none;
+      }
+    }
+    .launch{
+      @media @phone{
+        display: none;
+      }
+    }
 
     img {
-      width: 28%;
-      margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
+      .space-images-style();
     }
   }
 
   .visit-planets {
-    padding: 15px;
+    padding: @default-padding;
+
+    @media @phone{
+      border-bottom: @border-style;
+    }
 
     h3 {
       margin-top: 11px;
+      color: @header-font-color;
     }
 
     p {
       margin-top: 13px;
+      color: @main-font-color;
     }
   }
 
   .walk {
     margin-top: 60px;
-    border-top: 1px solid @main-border-color;
+    border-top: @border-style;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
 
+    @media @phone{
+      .centered-block-display(90%);
+      text-align: left;
+      margin-top: 20px;
+      border-top: none;
+      padding: 2%;
+    }
+
     .walk-text {
       width: 50%;
 
+      @media @phone{
+        width: 100%;
+      }
+
       h3 {
         margin-bottom: 10px;
+        color: @header-font-color;
       }
 
       p {
         margin-bottom: 26px;
+        color: @main-font-color;
       }
 
       .btn {
+        .btn-styler(30%,10%);
+        
+        @media @phone{
+          .centered-block-display(100%);
+          height: 50px;
+          padding-top: @default-padding+5;
+        }
+        &:hover{
+          background-color: @porcelain;
+          color: @btn-bg-color;
+        }
       }
     }
 
@@ -70,6 +115,27 @@
         height: auto;
         border-radius: 10px;
       }
+      
+      @media @phone{
+        display: none;
+      }
     }
   }
-}// home
+}
+
+//mobile image rendering
+.walk-img-mobile {
+display: none;
+
+  @media @phone{
+    .centered-block-display(90%);
+    margin-top: 20px;
+  }
+
+  img{
+    border-radius: 10px;
+    @media @phone{
+      width: 100%;
+    }
+  }
+}
